@@ -1,9 +1,13 @@
-import React  from "react";
+import React from "react";
+import BenefitSections from "./components/BenefitSections";
 import AboutUs from "./pages/AboutUs";
 
 const App = () => {
   return (
-  <AboutUs />
+    <>
+      <AboutUs />
+      <BenefitSections />
+    </>
   );
 };
 

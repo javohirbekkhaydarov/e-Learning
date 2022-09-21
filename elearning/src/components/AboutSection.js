@@ -23,7 +23,7 @@ const AboutSection = () => {
         </div>
       </div>
       <div className="image">
-        <img src={reading} alt="school library man" />
+        <img src={reading} alt="school library man 9-maktab pastdarg'om xoncharbog'" />
       </div>
     </div>
   );
