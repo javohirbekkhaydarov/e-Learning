@@ -6,7 +6,7 @@ const BenefitSections = () => {
       <div className="description">
         <h2>High Quality learning system</h2>
         <div className="benefit">
-          <h30> Online platform </h30>
+          <h3> Online platform </h3>
           <h3> High experenced mentors</h3>
           <h3> Fast Learning system</h3>
           <h3> Offline school for adults for children</h3>
