@@ -1,14 +1,13 @@
 import React from "react";
-import BenefitSections from "./components/BenefitSections";
-import FaqSection from "./components/FaqSection";
+
 import AboutUs from "./pages/AboutUs";
+import GlobalStyle from "./components/GlobalStyle";
 
 const App = () => {
   return (
     <>
+      <GlobalStyle />
       <AboutUs />
-      <BenefitSections />
-      <FaqSection />
     </>
   );
 };

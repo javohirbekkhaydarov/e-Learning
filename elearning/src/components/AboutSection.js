@@ -1,10 +1,12 @@
 import React from "react";
 import reading from "../img/reading.jpg";
+import styled from "styled-components";
 const AboutSection = () => {
   return (
-    <div>
+    <About>
       <div className="description">
         <div className="title">
+          
           <div className="hide">
             <h2> Be educated so that</h2>
           </div>
@@ -23,10 +25,21 @@ const AboutSection = () => {
         </div>
       </div>
       <div className="image">
-        <img src={reading} alt="school library man 9-maktab pastdarg'om xoncharbog'" />
+        <img
+          src={reading}
+          alt="school library man 9-maktab pastdarg'om xoncharbog'"
+        />
       </div>
-    </div>
+    </About>
   );
 };
+
+// Styled Components
+
+const About = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
 export default AboutSection;
