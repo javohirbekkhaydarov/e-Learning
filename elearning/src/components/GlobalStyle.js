@@ -25,8 +25,31 @@ const GlobalStyle = createGlobalStyle`
     background-color: #fff;
     color: #008080;
   }
- }
 
+ }
+ h2 {
+  font-weight: lighter;
+  font-size: 4rem;
+ }
+h3 {
+  color: #fff;
+}
+h4 {
+  font-weight: bold;
+}
+span {
+  color: #fff;
+  font-weight: bolder;
+}
+a  {
+  font-size: 1.1rem;
+}
+p {
+  padding: 3rem 0;
+  color: #fff;
+  font-size:1.3rem;
+  
+}
 `;
 
 export default GlobalStyle;
