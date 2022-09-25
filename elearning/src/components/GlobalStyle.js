@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
  }
 
  body {
-  background-color: #008080;
+  background-color: #257F69;
+  font-family: 'SF  Pro Display' ,  -apple-system ,'Open Sans', 'Helvetica Neue', sans-serif;
  }
 
  button {
