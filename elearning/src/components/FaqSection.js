@@ -1,8 +1,9 @@
 import React from "react";
-
+import styled from "styled-components";
+import { About } from "../styles";
 const FaqSection = () => {
   return (
-    <div className="faq">
+    <Faq>
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
@@ -15,6 +16,7 @@ const FaqSection = () => {
             quidem.
           </p>
         </div>
+        <div className="faq-line"></div>
 
         <div className="question">
           <h4>How much do I have to pay per month?</h4>
@@ -25,6 +27,7 @@ const FaqSection = () => {
               quidem.
             </p>
           </div>
+          <div className="faq-line"></div>
         </div>
 
         <div className="question">
@@ -36,6 +39,7 @@ const FaqSection = () => {
               quidem.
             </p>
           </div>
+          <div className="faq-line"></div>
         </div>
 
         <div className="question">
@@ -47,10 +51,36 @@ const FaqSection = () => {
               quidem.
             </p>
           </div>
+          <div className="faq-line"></div>
         </div>
       </div>
-    </div>
+    </Faq>
   );
 };
+
+const Faq = styled(About)`
+  display: block;
+  margin: 2rem;
+
+  h2 {
+    padding-bottom: 2rem;
+    font-weight: lighter;
+  }
+  .question {
+    padding: 3rem 0rem;
+    cursor: pointer;
+  }
+  .answear {
+    padding: 2rem 0rem;
+    p {
+      padding: 1rem 0rem;
+    }
+  }
+  .faq-line {
+    background-color: #ccc;
+    height: 0.1rem;
+    width: 100%;
+  }
+`;
 
 export default FaqSection;
