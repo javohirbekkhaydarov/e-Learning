@@ -7,6 +7,7 @@ import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 
 import { Switch, Route } from "react-router-dom";
+import CourseDetail from "./pages/CourseDetail";
 
 const App = () => {
   return (
@@ -17,8 +18,11 @@ const App = () => {
         <Route path="/" exact>
           <AboutUs />
         </Route>
-        <Route path="/courses">
+        <Route path="/courses" exact>
           <Courses />
+        </Route>
+        <Route path="/courses/:id">
+          <CourseDetail/>
         </Route>
         <Route path="/contact">
           <Contact />
