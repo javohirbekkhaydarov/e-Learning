@@ -4,11 +4,21 @@ import { About, Description, Hide, Image } from "../styles";
 
 import { motion } from "framer-motion";
 const AboutSection = () => {
+  const container = {
+    hidden: { y: 50 },
+    show: { x: 0 },
+    transition: { duration: 1, ease: "easeIn" },
+  };
+
   return (
     <About>
       <Description>
-        <div className="title">
-
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="title"
+        >
           <Hide>
             <motion.h2
               animate={{
@@ -57,7 +67,7 @@ const AboutSection = () => {
             empty
           </p>
           <button>About Us</button>
-        </div>
+        </motion.div>
       </Description>
       <Image>
         <motion.img
