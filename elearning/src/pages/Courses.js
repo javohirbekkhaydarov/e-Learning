@@ -3,26 +3,41 @@ import styled from "styled-components";
 import github from "../img/github.png";
 import next from "../img/next.png";
 import docker from "../img/docker.png";
-
+import { PageAnimation } from "../Animation";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 const Courses = () => {
   return (
-    <CourseStyle>
-      <Course>
-        <h2>GitHub crash course</h2>
-        <div className="line"></div>
-        <img src={github} alt="git and github" />
-      </Course>
-      <Course>
-        <h2>NEXT js App</h2>
-        <div className="line"></div>
-        <img src={next} alt="git and github" />
-      </Course>
-      <Course>
-        <h2>Docker Practicum</h2>
-        <div className="line"></div>
-        <img src={docker} alt="git and github" />
-      </Course>
-    </CourseStyle>
+    <motion.div
+      exit="exit"
+      variants={PageAnimation}
+      initial="hidden"
+      animate="show"
+    >
+      <CourseStyle>
+        <Course>
+          <h2>GitHub crash course</h2>
+          <div className="line"></div>
+          <Link to="courses/react">
+            <img src={github} alt="git and github" />
+          </Link>
+        </Course>
+        <Course>
+          <h2>NEXT js App</h2>
+          <div className="line"></div>
+          <Link to="courses/javascript">
+            <img src={next} alt="git and github" />
+          </Link>
+        </Course>
+        <Course>
+          <h2>Docker Practicum</h2>
+          <div className="line"></div>
+          <Link to="courses/soon">
+            <img src={docker} alt="git and github" />
+          </Link>
+        </Course>
+      </CourseStyle>
+    </motion.div>
   );
 };
 const CourseStyle = styled.div`
@@ -41,7 +56,6 @@ const Course = styled.div`
     background-color: #ccc;
     margin-bottom: 3rem;
     object-fit: cover;
-
   }
   img {
     width: 100%;

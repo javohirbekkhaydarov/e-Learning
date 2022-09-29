@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { CourseState } from "../CourseState";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import { PageAnimation } from "../Animation";
 const CourseDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
@@ -17,7 +20,12 @@ const CourseDetail = () => {
   return (
     <>
       {course && (
-        <Details>
+        <Details
+          exit="exit"
+          variants={PageAnimation}
+          initial="hidden"
+          animate="show"
+        >
           <Header>
             <h1>{course.title}</h1>
             <img src={course.mainImg} alt="" />
@@ -28,7 +36,7 @@ const CourseDetail = () => {
   );
 };
 
-const Details = styled.div``;
+const Details = styled(motion.div)``;
 
 const Header = styled.div``;
 
